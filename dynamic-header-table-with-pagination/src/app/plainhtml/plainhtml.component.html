@@ -7,9 +7,13 @@
     </th>
   </ng-container>
 </tr>
-  <tr *ngFor="let todos of todosList">
+  <tr *ngFor="let todos of paginatedData" [ngClass]="{'incomplete-todo' : !todos.completed}">
     <td>{{todos.id}}</td>
     <td>{{todos.title}}</td>
     <td>{{todos.completed}}</td>
   </tr>
 </table>
+<div class="btn-container">
+  <button (click)="prevPage()">Prev</button>
+  <button (click)="nextPage()">Next</button>
+</div>

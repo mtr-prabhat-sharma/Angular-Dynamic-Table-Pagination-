@@ -1,0 +1,10 @@
+.incomplete-todo {
+    background-color: rgb(187, 72, 72);
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    justify-content:space-between;
+    width: 48.5%;
+}
