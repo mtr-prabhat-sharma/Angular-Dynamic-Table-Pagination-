@@ -1,0 +1,15 @@
+<h1> TODOS PLAIN HTML TABLE</h1>
+<table>
+<tr>
+  <ng-container *ngFor="let header of tableHeaders">
+    <th *ngIf="header !== 'userId'">
+      {{ header | uppercase }}
+    </th>
+  </ng-container>
+</tr>
+  <tr *ngFor="let todos of todosList">
+    <td>{{todos.id}}</td>
+    <td>{{todos.title}}</td>
+    <td>{{todos.completed}}</td>
+  </tr>
+</table>
